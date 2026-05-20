@@ -18,145 +18,146 @@
         .header-font {
             font-family: 'Space Grotesk', sans-serif;
         }
-        /* Gradient animations */
-        .animated-gradient {
-            background: linear-gradient(-45deg, #4f46e5, #6366f1, #a855f7, #3b82f6);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+        /* Curva estética al fondo inspirada en la imagen corporativa de MigTel */
+        .mig-curve {
+            border-bottom-left-radius: 50% 8%;
+            border-bottom-right-radius: 50% 8%;
         }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        /* Custom scrollbar */
+        /* Configuración personalizada de barra de desplazamiento */
         ::-webkit-scrollbar {
             width: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: rgba(15, 23, 42, 0.05);
+            background: rgba(0, 168, 232, 0.05);
         }
         .dark ::-webkit-scrollbar-track {
-            background: #0f172a;
+            background: #091a2f;
         }
         ::-webkit-scrollbar-thumb {
-            background: rgba(30, 41, 59, 0.2);
+            background: rgba(0, 168, 232, 0.2);
             border-radius: 3px;
         }
         .dark ::-webkit-scrollbar-thumb {
-            background: #1e293b;
+            background: #007cc0;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between bg-slate-50 text-slate-900 transition-colors duration-300" id="body-theme">
+<body class="min-h-screen flex flex-col justify-between bg-[#f0f9ff] text-slate-900 transition-colors duration-300" id="body-theme">
 
-    <!-- HEADER / BARRA DE NAVEGACIÓN -->
-    <header class="border-b border-slate-200 dark:border-slate-800 bg-white/85 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-40 px-4 py-3 shadow-sm transition-colors duration-300">
+    <!-- HEADER / BARRA DE NAVEGACIÓN (Diseño de la cabecera MigTel) -->
+    <header class="border-b border-sky-100 dark:border-sky-950 bg-white/90 dark:bg-[#07162c]/90 backdrop-blur-md sticky top-0 z-40 px-4 py-3.5 shadow-sm transition-colors duration-300">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <!-- Logo de Migtel -->
+            
+            <!-- Logo oficial estilizado de Migtel -->
             <div class="flex items-center gap-3">
-                <div class="bg-indigo-600 text-white p-2 rounded-xl shadow-lg shadow-indigo-500/30">
-                    <i data-lucide="activity" class="w-6 h-6 text-yellow-300"></i>
+                <div class="bg-[#00a8e8] text-white p-2 rounded-xl shadow-lg shadow-sky-500/20">
+                    <i data-lucide="wifi" class="w-6 h-6 text-white"></i>
                 </div>
                 <div>
-                    <h1 class="text-xl font-bold tracking-tight header-font text-slate-900 dark:text-white flex items-center gap-2">
-                        MIGTEL <span class="text-xs bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 px-2.5 py-0.5 rounded-full border border-indigo-500/30 font-semibold">LABS PORTAL</span>
+                    <h1 class="text-xl font-bold tracking-tight header-font text-[#0056b3] dark:text-[#00a8e8] flex items-center gap-2">
+                        MigTel <span class="text-xs bg-sky-150/10 text-sky-600 dark:text-sky-300 px-2.5 py-0.5 rounded-full border border-sky-400/30 font-semibold">PORTAL DE LABS</span>
                     </h1>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Plataforma de Simulación y Gamificación</p>
+                    <p class="text-xs text-sky-600 dark:text-sky-400">Plataforma de Capacitación y Simulación</p>
                 </div>
             </div>
             
-            <!-- Botón de Tema -->
-            <button onclick="toggleTheme()" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Cambiar Modo de Color">
+            <!-- Botón de alternancia de Tema (Modo Claro/Oscuro) -->
+            <button onclick="toggleTheme()" class="p-2.5 rounded-xl border border-sky-200 dark:border-sky-900 text-sky-600 dark:text-sky-300 hover:bg-sky-100 dark:hover:bg-[#0c2443] transition-colors shadow-sm" title="Cambiar Modo de Color">
                 <i id="theme-icon-light" data-lucide="sun" class="w-5 h-5 dark:hidden"></i>
-                <i id="theme-icon-dark" data-lucide="moon" class="w-5 h-5 hidden dark:block text-yellow-350"></i>
+                <i id="theme-icon-dark" data-lucide="moon" class="w-5 h-5 hidden dark:block text-yellow-300"></i>
             </button>
         </div>
     </header>
 
-    <!-- SECCIÓN HÉROE (HERO) -->
-    <section class="relative overflow-hidden py-16 md:py-24 border-b border-slate-200 dark:border-slate-900 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <!-- SECCIÓN HÉROE (Inspirada exactamente en el banner azul de MigTel con la curva blanca abajo) -->
+    <section class="relative bg-gradient-to-r from-[#00a8e8] via-[#007cc0] to-[#0056b3] text-white py-16 md:py-24 mig-curve overflow-hidden shadow-md">
+        <!-- Overlay decorativo de red de telecomunicaciones/nodos en fondo -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M10,20 L30,40 L50,15 L70,50 L90,25" fill="none" stroke="white" stroke-width="0.5" />
+                <path d="M15,60 L45,45 L60,80 L85,55" fill="none" stroke="white" stroke-width="0.5" />
+                <circle cx="10" cy="20" r="1.5" fill="white" />
+                <circle cx="30" cy="40" r="1.5" fill="white" />
+                <circle cx="50" cy="15" r="1.5" fill="white" />
+                <circle cx="70" cy="50" r="1.5" fill="white" />
+                <circle cx="90" cy="25" r="1.5" fill="white" />
+            </svg>
+        </div>
+
         <div class="max-w-6xl mx-auto px-4 relative z-10 text-center">
-            <span class="text-xs bg-indigo-100 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-400 px-3.5 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-900/50 font-bold tracking-wider uppercase">
-                Capacitación Interactiva de Vanguardia
+            <span class="text-xs bg-white/20 text-white px-4 py-1.5 rounded-full border border-white/30 font-bold tracking-wider uppercase backdrop-blur-sm">
+                LA ERA DIGITAL A TU ALCANCE
             </span>
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold header-font text-slate-900 dark:text-white mt-6 mb-6 tracking-tight leading-tight">
-                Simuladores Técnicos de <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400">Migtel</span>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-extrabold header-font text-white mt-6 mb-4 tracking-tight leading-tight">
+                Simuladores Técnicos Especializados
             </h2>
-            <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8 text-sm md:text-base md:leading-relaxed">
-                Potenciamos las habilidades de nuestra fuerza técnica mediante escenarios lúdicos de alta precisión. Domina el despliegue de redes GPON y la alineación electromagnética de enlaces inalámbricos desde entornos totalmente interactivos.
+            <p class="text-sky-50 max-w-2xl mx-auto mb-8 text-sm md:text-base leading-relaxed">
+                ¿Buscas optimizar las competencias operativas? Ponemos a tu alcance escenarios interactivos de alta definición tecnológica para el dominio de redes de fibra óptica y alineamiento de antenas.
             </p>
             
-            <!-- Estadísticas rápidas o beneficios -->
-            <div class="flex flex-wrap justify-center gap-6 text-xs md:text-sm font-semibold text-slate-500 dark:text-slate-400">
-                <span class="flex items-center gap-2">
-                    <i data-lucide="check-circle-2" class="w-4.5 h-4.5 text-emerald-500"></i> Aprendizaje Autocontenido
+            <div class="flex flex-wrap justify-center gap-6 text-xs md:text-sm font-semibold text-white/90">
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1.5 rounded-lg border border-white/10 backdrop-blur-sm">
+                    <i data-lucide="shield-check" class="w-4.5 h-4.5 text-sky-200"></i> Metodología Práctica Autocontenida
                 </span>
-                <span class="flex items-center gap-2">
-                    <i data-lucide="check-circle-2" class="w-4.5 h-4.5 text-emerald-500"></i> Simulación Física Real
-                </span>
-                <span class="flex items-center gap-2">
-                    <i data-lucide="check-circle-2" class="w-4.5 h-4.5 text-emerald-500"></i> Evaluación de Competencias
+                <span class="flex items-center gap-2 bg-white/10 px-3.5 py-1.5 rounded-lg border border-white/10 backdrop-blur-sm">
+                    <i data-lucide="cpu" class="w-4.5 h-4.5 text-sky-200"></i> Entorno de Simulación Física Real
                 </span>
             </div>
         </div>
-        
-        <!-- Elementos de diseño de fondo -->
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.05),transparent_45%)]"></div>
     </section>
 
-    <!-- SECCIÓN DE LOS JUEGOS (CARDS) -->
-    <main class="max-w-6xl w-full mx-auto px-4 py-12 md:py-16">
+    <!-- SECCIÓN DE LOS JUEGOS (TARJETAS CON LA PALETA MIGTEL) -->
+    <main class="max-w-6xl w-full mx-auto px-4 py-16">
         <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
             
             <!-- TARJETA JUEGO 1: FIBRA MASTER -->
-            <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1">
+            <div class="group bg-white dark:bg-[#07162c] border border-sky-100 dark:border-sky-950 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1">
                 <div>
-                    <!-- Encabezado con degradado visual -->
-                    <div class="p-6 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white relative">
-                        <div class="absolute right-6 top-6 bg-white/10 p-2.5 rounded-xl backdrop-blur-md">
+                    <!-- Banner de la Tarjeta con tonos Celestes y Azules de MigTel -->
+                    <div class="p-6 bg-gradient-to-r from-[#00a8e8] to-[#007cc0] text-white relative">
+                        <div class="absolute right-6 top-6 bg-white/15 p-2.5 rounded-xl backdrop-blur-md">
                             <i data-lucide="network" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="text-[10px] font-bold tracking-widest uppercase bg-indigo-700/50 px-2.5 py-1 rounded-full border border-indigo-400/30">
+                        <span class="text-[10px] font-bold tracking-widest uppercase bg-white/20 px-2.5 py-1 rounded-full border border-white/20">
                             Fibra Óptica & FTTH
                         </span>
                         <h3 class="text-2xl font-bold header-font mt-3 mb-1">Migtel Fibra Master</h3>
-                        <p class="text-xs text-indigo-100">Simulador interactivo de diseño y balance óptico GPON</p>
+                        <p class="text-xs text-sky-50">Cálculo de enlaces en cascada y fusiones ópticas</p>
                     </div>
 
                     <!-- Contenido descriptivo -->
                     <div class="p-6 md:p-8 space-y-6">
-                        <p class="text-sm text-slate-600 dark:text-slate-350 leading-relaxed">
-                            Aprende de forma lúdica todo el proceso que lleva a cabo un Ingeniero de Planta Externa. Diseña planes de división óptica balanceados y ejecuta fusiones de precisión milimétrica.
+                        <p class="text-sm text-slate-600 dark:text-sky-300 leading-relaxed">
+                            Simula paso a paso la planificación, emisión láser y diagnóstico OTDR del despliegue de redes de fibra óptica. Diseña diagramas balanceados con splitters FDT y NAP.
                         </p>
 
                         <!-- Puntos Claves -->
                         <div>
-                            <h4 class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-3">Habilidades que desarrollas:</h4>
+                            <h4 class="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider mb-3">Habilidades a entrenar:</h4>
                             <ul class="space-y-2">
-                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-                                    <span class="p-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-900/50 mt-0.5">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#007cc0]"></i>
                                     </span>
-                                    <span><strong>Diseño GPON:</strong> Cálculo de Link Budget utilizando cascadas de splitters FDT y NAP.</span>
+                                    <span><strong>Diseño FTTH:</strong> Configuración de potencia OLT y división de red GPON.</span>
                                 </li>
-                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-                                    <span class="p-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-900/50 mt-0.5">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#007cc0]"></i>
                                     </span>
-                                    <span><strong>Física del haz láser:</strong> Control del ángulo límite y refracción interna.</span>
+                                    <span><strong>Física de Refracción:</strong> Dominio de ángulos de curvatura internos.</span>
                                 </li>
-                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-                                    <span class="p-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-900/50 mt-0.5">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#007cc0]"></i>
                                     </span>
-                                    <span><strong>Alineación y Fusión:</strong> Soldadura de hilos micrométricos de silicio con arco eléctrico.</span>
+                                    <span><strong>Soldadura por Fusión:</strong> Alineación fina en micras del núcleo de fibra.</span>
                                 </li>
-                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-                                    <span class="p-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-900/50 mt-0.5">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#007cc0]"></i>
                                     </span>
-                                    <span><strong>Reflectometría (OTDR):</strong> Análisis de firmas ópticas y localización de fallas mecánicas.</span>
+                                    <span><strong>Análisis OTDR:</strong> Detección de fallas mecánicas en reflectometría.</span>
                                 </li>
                             </ul>
                         </div>
@@ -165,60 +166,60 @@
 
                 <!-- Botón de Acción -->
                 <div class="p-6 md:p-8 pt-0">
-                    <a href="https://diegoporro.github.io/MigTelFOGame/" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-2xl flex items-center justify-center gap-2.5 shadow-lg shadow-indigo-600/15 group-hover:shadow-indigo-600/30 transition-all duration-300 transform group-hover:-translate-y-0.5">
+                    <a href="https://diegoporro.github.io/MigTelFOGame/" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 bg-[#007cc0] hover:bg-[#0056b3] text-white font-bold rounded-2xl flex items-center justify-center gap-2.5 shadow-lg shadow-sky-600/10 group-hover:shadow-sky-600/25 transition-all duration-300 transform group-hover:-translate-y-0.5">
                         Iniciar Simulador de Fibra <i data-lucide="arrow-up-right" class="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
                     </a>
                 </div>
             </div>
 
             <!-- TARJETA JUEGO 2: ALINEACIÓN DE ANTENA -->
-            <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1">
+            <div class="group bg-white dark:bg-[#07162c] border border-sky-100 dark:border-sky-950 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1">
                 <div>
-                    <!-- Encabezado con degradado visual -->
-                    <div class="p-6 bg-gradient-to-r from-violet-500 to-purple-600 text-white relative">
-                        <div class="absolute right-6 top-6 bg-white/10 p-2.5 rounded-xl backdrop-blur-md">
+                    <!-- Banner de la Tarjeta con tonos Azules y Cianes de MigTel -->
+                    <div class="p-6 bg-gradient-to-r from-[#007cc0] to-[#0056b3] text-white relative">
+                        <div class="absolute right-6 top-6 bg-white/15 p-2.5 rounded-xl backdrop-blur-md">
                             <i data-lucide="radio" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="text-[10px] font-bold tracking-widest uppercase bg-purple-700/50 px-2.5 py-1 rounded-full border border-purple-400/30">
+                        <span class="text-[10px] font-bold tracking-widest uppercase bg-white/20 px-2.5 py-1 rounded-full border border-white/20">
                             Radiofrecuencia & Wireless
                         </span>
                         <h3 class="text-2xl font-bold header-font mt-3 mb-1">Migtel Labs</h3>
-                        <p class="text-xs text-purple-100">Simulador dinámico de alineación electromagnética de antenas</p>
+                        <p class="text-xs text-sky-50">Alineación electromagnética de enlaces punto a punto</p>
                     </div>
 
                     <!-- Contenido descriptivo -->
                     <div class="p-6 md:p-8 space-y-6">
-                        <p class="text-sm text-slate-600 dark:text-slate-350 leading-relaxed">
-                            Simula la alineación perfecta de enlaces inalámbricos punto a punto. Ajusta el Azimut y la Elevación para maximizar los decibelios de recepción de señal y mitigar la interferencia.
+                        <p class="text-sm text-slate-600 dark:text-sky-300 leading-relaxed">
+                            Simula de manera práctica el apuntamiento físico de radioenlaces. Ajusta de forma precisa el Azimut y la Elevación para maximizar los decibelios de la señal y reducir el ruido.
                         </p>
 
                         <!-- Puntos Claves -->
                         <div>
-                            <h4 class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-3">Habilidades que desarrollas:</h4>
+                            <h4 class="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider mb-3">Habilidades a entrenar:</h4>
                             <ul class="space-y-2">
-                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-                                    <span class="p-0.5 rounded-full bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-900/50 mt-0.5">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#0056b3]"></i>
                                     </span>
-                                    <span><strong>Orientación Espacial:</strong> Configuración manual precisa de Azimut (eje horizontal) y Elevación.</span>
+                                    <span><strong>Orientación:</strong> Alineamiento milimétrico de Azimut y elevación de antenas.</span>
                                 </li>
-                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-                                    <span class="p-0.5 rounded-full bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-900/50 mt-0.5">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#0056b3]"></i>
                                     </span>
-                                    <span><strong>Lóbulos de Radiación:</strong> Comprensión visual del lóbulo principal frente a lóbulos secundarios.</span>
+                                    <span><strong>Patrones de Radiación:</strong> Interpretación de lóbulos principales y secundarios.</span>
                                 </li>
-                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-                                    <span class="p-0.5 rounded-full bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-900/50 mt-0.5">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#0056b3]"></i>
                                     </span>
-                                    <span><strong>Lecturas RSSI / SNR:</strong> Monitoreo en tiempo real de la intensidad de señal electromagnética.</span>
+                                    <span><strong>Indicadores RF:</strong> Lecturas realistas de intensidad RSSI e índice SNR.</span>
                                 </li>
-                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-                                    <span class="p-0.5 rounded-full bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-900/50 mt-0.5">
-                                        <i data-lucide="check" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#0056b3]"></i>
                                     </span>
-                                    <span><strong>Aislamiento de Interferencias:</strong> Diagnóstico de ruido ambiental para optimizar enlaces críticos.</span>
+                                    <span><strong>Mitigación de Ruido:</strong> Modulación espacial frente a interferencias ambientales.</span>
                                 </li>
                             </ul>
                         </div>
@@ -227,7 +228,7 @@
 
                 <!-- Botón de Acción -->
                 <div class="p-6 md:p-8 pt-0">
-                    <a href="https://diegoporro.github.io/MigTelAntenaGame/" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-2xl flex items-center justify-center gap-2.5 shadow-lg shadow-purple-600/15 group-hover:shadow-purple-600/30 transition-all duration-300 transform group-hover:-translate-y-0.5">
+                    <a href="https://diegoporro.github.io/MigTelAntenaGame/" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 bg-[#0056b3] hover:bg-[#003d82] text-white font-bold rounded-2xl flex items-center justify-center gap-2.5 shadow-lg shadow-blue-600/10 group-hover:shadow-blue-600/25 transition-all duration-300 transform group-hover:-translate-y-0.5">
                         Iniciar Simulador de Antena <i data-lucide="arrow-up-right" class="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
                     </a>
                 </div>
@@ -236,28 +237,28 @@
         </div>
     </main>
 
-    <!-- SECCIÓN CONTACTO / SOPORTE TÉCNICO -->
-    <section class="border-t border-slate-200 dark:border-slate-900 bg-white dark:bg-slate-950 py-12 transition-colors duration-300">
+    <!-- SECCIÓN CONTACTO / SOPORTE TECNOLÓGICO -->
+    <section class="border-t border-sky-150 dark:border-[#0c2443] bg-white dark:bg-[#051021] py-12 transition-colors duration-300">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="inline-flex p-3 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 rounded-2xl border border-indigo-100 dark:border-indigo-900/50 mb-4">
+            <div class="inline-flex p-3 bg-sky-50 dark:bg-sky-950/50 text-[#007cc0] dark:text-sky-400 rounded-2xl border border-sky-100 dark:border-sky-900/50 mb-4 shadow-sm">
                 <i data-lucide="help-circle" class="w-6 h-6"></i>
             </div>
             <h3 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white header-font mb-2">¿Tienes alguna consulta técnica o sugerencia?</h3>
-            <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 max-w-lg mx-auto mb-6">
-                El departamento de tecnología está comprometido con la constante mejora y actualización pedagógica de nuestras plataformas de simulación interactiva.
+            <p class="text-xs md:text-sm text-slate-500 dark:text-sky-300 max-w-lg mx-auto mb-6 leading-relaxed">
+                El departamento de tecnología está comprometido con la constante innovación formativa y actualización de nuestras plataformas de simulación interactiva.
             </p>
             
-            <a href="mailto:tecnologia@migtel.net.ve" class="inline-flex items-center gap-2.5 px-6 py-3 bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-900 font-bold rounded-xl text-xs md:text-sm transition-colors shadow-md">
+            <a href="mailto:tecnologia@migtel.net.ve" class="inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-[#00a8e8] to-[#0056b3] hover:from-[#007cc0] hover:to-[#003d82] text-white font-bold rounded-xl text-xs md:text-sm transition-all duration-300 shadow-md hover:shadow-lg">
                 <i data-lucide="mail" class="w-4.5 h-4.5"></i> tecnologia@migtel.net.ve
             </a>
         </div>
     </section>
 
     <!-- PIE DE PAGINA -->
-    <footer class="border-t border-slate-200 dark:border-slate-900 bg-slate-100 dark:bg-slate-950/90 py-6 px-4 transition-colors duration-300">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 gap-3">
+    <footer class="border-t border-sky-100 dark:border-sky-950 bg-sky-50 dark:bg-[#030a14] py-6 px-4 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] text-sky-600/70 dark:text-sky-500/75 gap-3">
             <p>Copyright 2026 © Comunicaciones Migtel C.A. RIF: J-40212711-1.</p>
-            <p>Soporte de Planta Externa y Planta Interna.</p>
+            <p>Soporte de Planta Externa, Planta Interna e Innovación Digital.</p>
         </div>
     </footer>
 
@@ -268,22 +269,23 @@
             lucide.createIcons();
         };
 
-        // Función para cambiar de Tema (Modo Claro por Defecto)
+        // Función para cambiar de Tema (Modo Claro por Defecto basado en MigTel)
         function toggleTheme() {
             const body = document.getElementById('body-theme');
             const isDark = body.classList.contains('dark');
             
             if (isDark) {
                 // Cambiar a Modo Claro
-                body.classList.remove('dark', 'bg-slate-950', 'text-slate-100');
-                body.classList.add('bg-slate-50', 'text-slate-900');
+                body.classList.remove('dark', 'text-slate-100');
+                body.classList.remove('bg-[#050f1e]');
+                body.classList.add('bg-[#f0f9ff]', 'text-slate-900');
                 document.getElementById('theme-icon-light').classList.remove('dark:hidden');
                 document.getElementById('theme-icon-dark').classList.add('dark:block');
             } else {
                 // Cambiar a Modo Oscuro
-                body.classList.add('dark', 'bg-slate-955', 'text-slate-100');
-                body.classList.remove('bg-slate-50', 'text-slate-900');
-                body.classList.add('bg-slate-950');
+                body.classList.add('dark', 'text-slate-100');
+                body.classList.remove('bg-[#f0f9ff]', 'text-slate-900');
+                body.classList.add('bg-[#050f1e]');
             }
         }
     </script>
