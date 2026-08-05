@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Migtel - Portal de Simuladores Técnicos</title>
+    <title>MigTel - Portal de Simuladores Técnicos</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -44,11 +44,11 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between bg-[#f0f9ff] text-slate-900 transition-colors duration-300" id="body-theme">
 
-    <!-- HEADER / BARRA DE NAVEGACIÓN (Diseño de la cabecera MigTel) -->
+    <!-- HEADER / BARRA DE NAVEGACIÓN -->
     <header class="border-b border-sky-100 dark:border-sky-950 bg-white/90 dark:bg-[#07162c]/90 backdrop-blur-md sticky top-0 z-40 px-4 py-3.5 shadow-sm transition-colors duration-300">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
             
-            <!-- Logo oficial estilizado de Migtel -->
+            <!-- Logo oficial estilizado de MigTel -->
             <div class="flex items-center gap-3">
                 <div class="bg-[#00a8e8] text-white p-2 rounded-xl shadow-lg shadow-sky-500/20">
                     <i data-lucide="wifi" class="w-6 h-6 text-white"></i>
@@ -69,7 +69,7 @@
         </div>
     </header>
 
-    <!-- SECCIÓN HÉROE (Inspirada exactamente en el banner azul de MigTel con la curva blanca abajo) -->
+    <!-- SECCIÓN HÉROE -->
     <section class="relative bg-gradient-to-r from-[#00a8e8] via-[#007cc0] to-[#0056b3] text-white py-16 md:py-24 mig-curve overflow-hidden shadow-md">
         <!-- Overlay decorativo de red de telecomunicaciones/nodos en fondo -->
         <div class="absolute inset-0 opacity-20 pointer-events-none">
@@ -92,7 +92,7 @@
                 Simuladores Técnicos Especializados
             </h2>
             <p class="text-sky-50 max-w-2xl mx-auto mb-8 text-sm md:text-base leading-relaxed">
-                ¿Buscas optimizar las competencias operativas? Ponemos a tu alcance escenarios interactivos de alta definición tecnológica para el dominio de redes de fibra óptica y alineamiento de antenas.
+                ¿Buscas optimizar las competencias operativas? Ponemos a tu alcance escenarios interactivos de alta definición tecnológica para el dominio de redes de fibra óptica, cálculo de respaldo eléctrico y alineamiento de antenas.
             </p>
             
             <div class="flex flex-wrap justify-center gap-6 text-xs md:text-sm font-semibold text-white/90">
@@ -106,14 +106,13 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE LOS JUEGOS (TARJETAS CON LA PALETA MIGTEL) -->
-    <main class="max-w-6xl w-full mx-auto px-4 py-16">
-        <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+    <!-- SECCIÓN DE APPS Y SIMULADORES -->
+    <main class="max-w-7xl w-full mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- TARJETA JUEGO 1: FIBRA MASTER -->
             <div class="group bg-white dark:bg-[#07162c] border border-sky-100 dark:border-sky-950 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1">
                 <div>
-                    <!-- Banner de la Tarjeta con tonos Celestes y Azules de MigTel -->
                     <div class="p-6 bg-gradient-to-r from-[#00a8e8] to-[#007cc0] text-white relative">
                         <div class="absolute right-6 top-6 bg-white/15 p-2.5 rounded-xl backdrop-blur-md">
                             <i data-lucide="network" class="w-8 h-8 text-white"></i>
@@ -121,17 +120,15 @@
                         <span class="text-[10px] font-bold tracking-widest uppercase bg-white/20 px-2.5 py-1 rounded-full border border-white/20">
                             Fibra Óptica & FTTH
                         </span>
-                        <h3 class="text-2xl font-bold header-font mt-3 mb-1">Migtel Fibra Master</h3>
+                        <h3 class="text-2xl font-bold header-font mt-3 mb-1">MigTel Fibra Master</h3>
                         <p class="text-xs text-sky-50">Cálculo de enlaces en cascada y fusiones ópticas</p>
                     </div>
 
-                    <!-- Contenido descriptivo -->
-                    <div class="p-6 md:p-8 space-y-6">
+                    <div class="p-6 space-y-6">
                         <p class="text-sm text-slate-600 dark:text-sky-300 leading-relaxed">
                             Simula paso a paso la planificación, emisión láser y diagnóstico OTDR del despliegue de redes de fibra óptica. Diseña diagramas balanceados con splitters FDT y NAP.
                         </p>
 
-                        <!-- Puntos Claves -->
                         <div>
                             <h4 class="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider mb-3">Habilidades a entrenar:</h4>
                             <ul class="space-y-2">
@@ -139,19 +136,19 @@
                                     <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-[#007cc0]"></i>
                                     </span>
-                                    <span><strong>Diseño FTTH:</strong> Configuración de potencia OLT y división de red GPON.</span>
+                                    <span><strong>Diseño FTTH:</strong> Configuración de potencia OLT y división GPON.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
                                     <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-[#007cc0]"></i>
                                     </span>
-                                    <span><strong>Física de Refracción:</strong> Dominio de ángulos de curvatura internos.</span>
+                                    <span><strong>Física de Refracción:</strong> Ángulos de curvatura internos.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
                                     <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-[#007cc0]"></i>
                                     </span>
-                                    <span><strong>Soldadura por Fusión:</strong> Alineación fina en micras del núcleo de fibra.</span>
+                                    <span><strong>Soldadura por Fusión:</strong> Alineación fina en micras del núcleo.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
                                     <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
@@ -164,36 +161,32 @@
                     </div>
                 </div>
 
-                <!-- Botón de Acción -->
-                <div class="p-6 md:p-8 pt-0">
+                <div class="p-6 pt-0">
                     <a href="https://diegoporro.github.io/MigTelFOGame/" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 bg-[#007cc0] hover:bg-[#0056b3] text-white font-bold rounded-2xl flex items-center justify-center gap-2.5 shadow-lg shadow-sky-600/10 group-hover:shadow-sky-600/25 transition-all duration-300 transform group-hover:-translate-y-0.5">
                         Iniciar Simulador de Fibra <i data-lucide="arrow-up-right" class="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- TARJETA JUEGO 2: ALINEACIÓN DE ANTENA -->
+            <!-- TARJETA 2 (DEL MEDIO): MIGTEL UPS CALCULATOR -->
             <div class="group bg-white dark:bg-[#07162c] border border-sky-100 dark:border-sky-950 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1">
                 <div>
-                    <!-- Banner de la Tarjeta con tonos Azules y Cianes de MigTel -->
                     <div class="p-6 bg-gradient-to-r from-[#007cc0] to-[#0056b3] text-white relative">
                         <div class="absolute right-6 top-6 bg-white/15 p-2.5 rounded-xl backdrop-blur-md">
-                            <i data-lucide="radio" class="w-8 h-8 text-white"></i>
+                            <i data-lucide="zap" class="w-8 h-8 text-white"></i>
                         </div>
                         <span class="text-[10px] font-bold tracking-widest uppercase bg-white/20 px-2.5 py-1 rounded-full border border-white/20">
-                            Radiofrecuencia & Wireless
+                            Energía & Autonomía
                         </span>
-                        <h3 class="text-2xl font-bold header-font mt-3 mb-1">Migtel Labs</h3>
-                        <p class="text-xs text-sky-50">Alineación electromagnética de enlaces punto a punto</p>
+                        <h3 class="text-2xl font-bold header-font mt-3 mb-1">MigTel UPS Calculator</h3>
+                        <p class="text-xs text-sky-50">Calculador de respaldo eléctrico y dimensionamiento de carga</p>
                     </div>
 
-                    <!-- Contenido descriptivo -->
-                    <div class="p-6 md:p-8 space-y-6">
+                    <div class="p-6 space-y-6">
                         <p class="text-sm text-slate-600 dark:text-sky-300 leading-relaxed">
-                            Simula de manera práctica el apuntamiento físico de radioenlaces. Ajusta de forma precisa el Azimut y la Elevación para maximizar los decibelios de la señal y reducir el ruido.
+                            Calculador de respaldo eléctrico interactivo con selección personalizada de dispositivos. Dimensiona la autonomía operativa estimando el consumo en vatios y la capacidad de las baterías.
                         </p>
 
-                        <!-- Puntos Claves -->
                         <div>
                             <h4 class="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider mb-3">Habilidades a entrenar:</h4>
                             <ul class="space-y-2">
@@ -201,34 +194,91 @@
                                     <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-[#0056b3]"></i>
                                     </span>
-                                    <span><strong>Orientación:</strong> Alineamiento milimétrico de Azimut y elevación de antenas.</span>
+                                    <span><strong>Selección de Equipos:</strong> Sumatoria y balance de potencia según catálogo.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
                                     <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-[#0056b3]"></i>
                                     </span>
-                                    <span><strong>Patrones de Radiación:</strong> Interpretación de lóbulos principales y secundarios.</span>
+                                    <span><strong>Estimación de Tiempo:</strong> Proyección precisa de autonomía en horas/minutos.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
                                     <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-[#0056b3]"></i>
                                     </span>
-                                    <span><strong>Indicadores RF:</strong> Lecturas realistas de intensidad RSSI e índice SNR.</span>
+                                    <span><strong>Eficiencia Energética:</strong> Factor de carga de inversores y bancos de batería.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
                                     <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-[#0056b3]"></i>
                                     </span>
-                                    <span><strong>Mitigación de Ruido:</strong> Modulación espacial frente a interferencias ambientales.</span>
+                                    <span><strong>Dimensionamiento de Respaldo:</strong> Prevención de caídas de nodos críticos.</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Botón de Acción -->
-                <div class="p-6 md:p-8 pt-0">
-                    <a href="https://diegoporro.github.io/MigTelAntenaGame/" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 bg-[#0056b3] hover:bg-[#003d82] text-white font-bold rounded-2xl flex items-center justify-center gap-2.5 shadow-lg shadow-blue-600/10 group-hover:shadow-blue-600/25 transition-all duration-300 transform group-hover:-translate-y-0.5">
+                <div class="p-6 pt-0">
+                    <a href="https://diegoporro.github.io/MigTelUPSCalculator/" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 bg-[#0056b3] hover:bg-[#003d82] text-white font-bold rounded-2xl flex items-center justify-center gap-2.5 shadow-lg shadow-blue-600/10 group-hover:shadow-blue-600/25 transition-all duration-300 transform group-hover:-translate-y-0.5">
+                        Iniciar Calculador UPS <i data-lucide="arrow-up-right" class="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- TARJETA JUEGO 3: ALINEACIÓN DE ANTENA -->
+            <div class="group bg-white dark:bg-[#07162c] border border-sky-100 dark:border-sky-950 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1">
+                <div>
+                    <div class="p-6 bg-gradient-to-r from-[#0056b3] to-[#003d82] text-white relative">
+                        <div class="absolute right-6 top-6 bg-white/15 p-2.5 rounded-xl backdrop-blur-md">
+                            <i data-lucide="radio" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-widest uppercase bg-white/20 px-2.5 py-1 rounded-full border border-white/20">
+                            Radiofrecuencia & Wireless
+                        </span>
+                        <h3 class="text-2xl font-bold header-font mt-3 mb-1">MigTel Antena Master</h3>
+                        <p class="text-xs text-sky-50">Alineación electromagnética de enlaces punto a punto</p>
+                    </div>
+
+                    <div class="p-6 space-y-6">
+                        <p class="text-sm text-slate-600 dark:text-sky-300 leading-relaxed">
+                            Simula de manera práctica el apuntamiento físico de radioenlaces. Ajusta de forma precisa el Azimut y la Elevación para maximizar los decibelios de la señal y reducir el ruido.
+                        </p>
+
+                        <div>
+                            <h4 class="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider mb-3">Habilidades a entrenar:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#003d82]"></i>
+                                    </span>
+                                    <span><strong>Orientación:</strong> Alineamiento milimétrico de Azimut y elevación.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#003d82]"></i>
+                                    </span>
+                                    <span><strong>Patrones de Radiación:</strong> Lóbulos principales y secundarios.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#003d82]"></i>
+                                    </span>
+                                    <span><strong>Indicadores RF:</strong> Lecturas realistas de RSSI y SNR.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-sky-200">
+                                    <span class="p-0.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-900/50 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-[#003d82]"></i>
+                                    </span>
+                                    <span><strong>Mitigación de Ruido:</strong> Modulación espacial frente a interferencias.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 pt-0">
+                    <a href="https://diegoporro.github.io/MigTelAntenaGame/" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 bg-[#003d82] hover:bg-[#002855] text-white font-bold rounded-2xl flex items-center justify-center gap-2.5 shadow-lg shadow-blue-800/10 group-hover:shadow-blue-800/25 transition-all duration-300 transform group-hover:-translate-y-0.5">
                         Iniciar Simulador de Antena <i data-lucide="arrow-up-right" class="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
                     </a>
                 </div>
@@ -269,7 +319,7 @@
             lucide.createIcons();
         };
 
-        // Función para cambiar de Tema (Modo Claro por Defecto basado en MigTel)
+        // Función para cambiar de Tema (Modo Claro por Defecto)
         function toggleTheme() {
             const body = document.getElementById('body-theme');
             const isDark = body.classList.contains('dark');
